@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Recommending system</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+
+</head>
+<body style="background: #1c1c1d;">
+    <h1 class="btn-warning p-2">Movie Recommendation System</h1>
+    <form action="/recommendations" method="POST" class="m-5">
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="col text-center p-5">
+                    <h2 class="text-center text-warning">Please enter the Movie name</h2>
+                    <textarea class="form-control m-5" name="movie" rows="6" cols="50" placeholder="Enter Movie name..."></textarea>
+                    <button class="btn btn-warning m-2" type="submit">Submit</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card border-warning" style="width: 18rem;">
+                        <div class="card-header bg-warning">
+                          <h4 class="font-weight-bold">Try these movies</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                          <li class="list-group-item">The Avengers</li>
+                          <li class="list-group-item">Spider-man</li>
+                          <li class="list-group-item">Pirates of the Caribbean: On Stranger Tides</li>
+                          <li class="list-group-item">Men in Black 3</li>
+                          <li class="list-group-item">Titanic</li>
+                          <li class="list-group-item">Jurassic World</li>
+                          <li class="list-group-item">Iron Man</li>
+                          <li class="list-group-item">Kung Fu Panda</li>
+                          <li class="list-group-item">Mission: Impossible III</li>
+                          
+                        </ul>
+                      </div> 
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

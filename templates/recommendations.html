@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+</head>
+
+<body style="background: #1c1c1d;">
+    <h1 class="btn-warning p-2">Movie Recommendation System</h1>
+    <div class="container mt-5">
+        <h1 class="text-center text-warning">Recommended Movies</h1>
+        <div class="row mt-5">
+            {% for recommendation in movies %}
+                <div class="col-sm-6 col-md-4 col-lg-2 mb-4">
+                    <div class="card border-warning">
+                        <img src="{{ recommendation['url'] }}" class="card-img-top border border-warning" alt="{{ recommendation['title'] }} Poster">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-text overflow-hidden text-truncate">{{ recommendation['title'] }}</p>
+                            <p class="card-text"> ⭐{{ recommendation['rating'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (if needed) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-Qq4H00rOVVRWiVwQHmBytm8H6H9f/EXxKXfmvA9yT5aOYY2Dtvb4R6CgD8z9WIU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-iu2Is+Zr9afAnAyj3x3fpbP63vdwzOc0rOB0Q7q1Fuq5FmzZ5f5S9SuBOnT0J6ej" crossorigin="anonymous"></script>
+</body>
+</html>
