@@ -1,5 +1,6 @@
 from flask import Flask, render_template,request
 import requests
+import os
 from get_movies import predict_score
 app = Flask(__name__)
 
@@ -53,4 +54,5 @@ def fetch_poster(movie_id):
     return poster_url
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
