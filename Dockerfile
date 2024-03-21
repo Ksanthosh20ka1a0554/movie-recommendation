@@ -8,9 +8,10 @@ RUN apk update && \
 WORKDIR /app
 
 # Copy requirements file
+COPY requirements.txt .
 
-
-
+# Install Python dependencies
+RUN pip install -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
