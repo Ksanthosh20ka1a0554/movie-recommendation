@@ -8,7 +8,7 @@ RUN apk update && \
 WORKDIR /app
 
 # Copy requirements file
-COPY requirements.txt .
+
 
 
 
