@@ -1,8 +1,7 @@
 FROM python:3.11-alpine
 
 # Install build tools
-RUN apk update && \
-    apk add --no-cache gcc g++ musl-dev
+
 
 # Set working directory
 WORKDIR /app
